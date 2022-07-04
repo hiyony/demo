@@ -10,17 +10,18 @@ import org.springframework.stereotype.Service;
 import com.example.demo.domain.Member;
 import com.example.demo.repository.MemberRepository;
 
+import javax.transaction.Transactional;
+
 
 //member join service 
-@Service
+@Transactional
 public class MemberService {
 	private final MemberRepository memberRepository;
 	
 	//constructor
 	//memberservice를 스프링에 등록할때 @Autowired를 확인하고 
-	//스프링 컨테이너에 있는 memorymemberrepository를 주입시켜줌 
-	
-	@Autowired 
+	//스프링 컨테이너에 있는 memorymemberrepository를 주입시켜줌
+
 	public MemberService(MemberRepository memberRepository) {
 		this.memberRepository = memberRepository;
 	}

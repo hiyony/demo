@@ -19,6 +19,6 @@ public class HelloController {
 		
 		model.addAttribute("title", messageSource.getMessage("app.title", null, locale));
 		model.addAttribute("hello", "Helllooooo!");
-		return "hello"; //HTML과 return의 이름이 같아야 함 
+		return "hello"; //HTMLとreturnの名前が必ず同じようにする
 	}
 }
